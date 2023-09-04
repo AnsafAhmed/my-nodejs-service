@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "startlocal": "npx cross-env DB_HOST=34.69.20.200 DB_NAME=nodedb DB_USER=ansaf DB_PASS=ansaf nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mariadb": "^2.5.6",
+    "sequelize": "^6.32.1"
   }
 }

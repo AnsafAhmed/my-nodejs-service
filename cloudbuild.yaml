@@ -1,4 +1,14 @@
 steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
+availableSecrets:
+  secretManager:
+  - versionName: projects/lofty-complex-397408/secrets/NODE_DB_HOST/versions/1
+    env: 'DB_HOST'
+  - versionName: projects/lofty-complex-397408/secrets/NODE_DB_NAME/versions/1
+    env: 'DB_NAME'
+  - versionName: projects/lofty-complex-397408/secrets/NODE_DB_USER/versions/1
+    env: 'DB_USER'
+  - versionName: projects/lofty-complex-397408/secrets/NODE_DB_PASS/versions/1
+    env: 'DB_PASS'
 timeout: "1600s"
